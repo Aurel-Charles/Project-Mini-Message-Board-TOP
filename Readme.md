@@ -75,6 +75,6 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 - Building layouts with CSS Grid, including `subgrid` to keep columns aligned across independently-rendered cards
 - Debugging common EJS pitfalls (`<% %>` vs `<%= %>`, HTML inside scriptlet tags)
 
-## Credits
+### Credits
 
 Exercise from [The Odin Project — Mini Message Board](https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board).

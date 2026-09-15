@@ -1,21 +1,20 @@
-<html>
-    <%- include('./partials/head') %>
+<%- include('./partials/head') %>
+<body>
     <header>
         <a href="/">Home</a>
     </header>
     <div>
         <form action="/new" method="post">
             <h2>Write a new message</h2>
-            
-            <label for="user">Name</label>
-            <input name="user" type="text">
 
-            <label for="text">Message</label>
+            <label for="user">Name</label>
+            <input name="user" id="user" type="text">
+
+            <label for="text-form">Message</label>
             <textarea rows="10" name="text" id="text-form"></textarea>
 
             <button type="submit">SUBMIT</button>
         </form>
     </div>
-
-
+</body>
 </html>

@@ -1,0 +1,25 @@
+
+<html>
+    <%- include('./partials/head') %>
+    <header>   
+        <a href="/new">Add a message</a>
+    </header>
+    <div class="messages-container">
+        <h2><%= title %></h2>
+        <hr>
+        <% if (messages.length === 0) { %>
+            <p>No messages at the moment...</p>
+        <% } else { %>
+            <div class="messages-list">
+                <% messages.forEach((message) => { %>
+                    <div class="message">
+                        <p class="message-text"><%= message.text %></p>
+                        <p class="message-user"><%= message.user %></p>
+                        <p class="message-date"><%= message.added.toDateString() %></p>
+                        <a class="message-open" href="/<%= message.id %>">OPEN</a>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+</html>

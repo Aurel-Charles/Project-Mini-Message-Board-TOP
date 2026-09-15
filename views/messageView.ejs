@@ -1,0 +1,18 @@
+<%- include('./partials/head') %>
+<body>
+    <header>
+        <a href="/">Home</a>
+    </header>
+    <div class="message-detail">
+        <h2>
+            <%= title %>
+            <span class="message-detail-id">#<%= message.id %></span>
+        </h2>
+        <p class="message-detail-meta">
+            <span class="message-detail-user"><%= message.user %></span>
+            <span class="message-detail-date"><%= message.added.toDateString() %></span>
+        </p>
+        <p class="message-detail-text"><%= message.text %></p>
+    </div>
+</body>
+</html>

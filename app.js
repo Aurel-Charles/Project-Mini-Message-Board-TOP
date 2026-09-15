@@ -19,6 +19,11 @@ app.set("views", join(__dirname, "./views"));
 app.use(logger)
 app.use("/" , indexRouter)
 
+app.use((err, req, res, next) => {
+    const status = err.statusCode || 500;
+    res.status(status).render("error", { title: "Erreur", status: status, message: err.message });
+});
+
 app.listen(PORT, (error) => {
     if (error) {
       throw error;

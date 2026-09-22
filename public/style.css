@@ -28,7 +28,7 @@ header > a:active {
 
 .messages-list {
     display: grid;
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-columns: 1fr auto auto auto auto;
     row-gap: 1rem;
 }
 
@@ -36,7 +36,7 @@ header > a:active {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: subgrid;
-    grid-template-areas: "text user date open";
+    grid-template-areas: "text user date open delete";
     align-items: center;
     gap: 0.75rem;
     background-color: rgb(255, 245, 232);
@@ -79,6 +79,28 @@ header > a:active {
 .message-open:hover {
     background-color: black;
     color: white;
+}
+
+.message-delete {
+    grid-area: delete;
+    justify-self: center;
+    padding: 0;
+    border: none;
+}
+
+.message-delete button {
+    all: unset;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.message-delete button:hover {
+    color: white;
+    background-color: black;
 }
 
 form {
@@ -133,7 +155,6 @@ form button:hover {
     color: black;
 }
 
-
 /* detail */
 .message-detail {
     max-width: 50%;
@@ -170,4 +191,16 @@ form button:hover {
     font-weight: normal;
     font-family: monospace;
     color: #888;
+}
+
+.add-message {
+    border: 1px white solid;
+    padding: 1rem;
+}
+
+.add-message:hover {
+    border-color: grey;
+    background-color: white;
+    color: black;
+    padding: 1rem;
 }
